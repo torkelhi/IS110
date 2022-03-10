@@ -18,17 +18,9 @@ public class Bremse {
         this.sistService = sistService;
     }
 
-    public void printBremseStatus()
-    {
-        System.out.println(maxStyrke);
-        System.out.println(myType);
-        System.out.println(sistService);
-    }
-
-
     public void upDateSistService()
     {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+        String timeStamp = Calendar.getInstance().getTime().toString();
         sistService = timeStamp;
     }
 
@@ -64,6 +56,9 @@ public class Bremse {
         String status = "Type - "+myType+"\n"+"Maxstyrke :"+maxStyrke;
         return status;
     }
+
+    public String getSistService()
+    {return sistService;}
 
 
 }

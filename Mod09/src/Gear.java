@@ -6,25 +6,26 @@ public class Gear {
      * Metodene er for å endre girens nåværende gir (gearNaa) og hente gearNaa.
      */
 
-    private final int MAX_CAPACITY;
+    private int MAX_CAPACITY;
     private int gearNaa;
 
     public Gear(int MAX_CAPACITY) {
         if(MAX_CAPACITY < 0)
         {
             System.out.println("negative antal gear er ikke mulig");
+            return;
         }
         if(MAX_CAPACITY >= 10)
         {
             System.out.println("Antall gear over 10 er ikke mulig" + "\n");
+            return;
         }
-        this.MAX_CAPACITY = MAX_CAPACITY;
-
         if (MAX_CAPACITY == 0)
         {
             gearNaa = 0;
         }
-        gearNaa = 1;
+        else{this.MAX_CAPACITY = MAX_CAPACITY;
+        gearNaa = 1;}
     }
     /**
      * 2 metoder for å sjekke om det er mulig å gire ned eller opp før en endring.
@@ -40,7 +41,7 @@ public class Gear {
           System.out.println("Denne sykkelen har ikke gear");
         return false;
       }
-      return false;
+        return false;
     }
 
     public boolean canBikeChangeGearDown()
@@ -56,7 +57,7 @@ public class Gear {
         if(!canBikeChangeGearDown())
         {System.out.println("Kan ikke gire ned nå");}
 
-        gearNaa -=1;
+        else{gearNaa -=1;}
     }
 
     public void changeGearUp()
@@ -64,7 +65,7 @@ public class Gear {
         if(!canBikeChangeGearUp())
         {System.out.println("Kan ikke gire opp nå");}
 
-        gearNaa +=1;
+        else{gearNaa +=1;}
     }
 
     public int getGearNaa()
