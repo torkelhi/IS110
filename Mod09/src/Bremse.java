@@ -61,7 +61,7 @@ public class Bremse {
 
     public String getBremseStatus()
     {
-        String status = "Type :"+myType+"\n"+"Maxstyrke :"+maxStyrke;
+        String status = "Type - "+myType+"\n"+"Maxstyrke :"+maxStyrke;
         return status;
     }
 

@@ -16,7 +16,7 @@ public class Gear {
         }
         if(MAX_CAPACITY >= 10)
         {
-            System.out.println("Antall gear over 10 er ikke mulig");
+            System.out.println("Antall gear over 10 er ikke mulig" + "\n");
         }
         this.MAX_CAPACITY = MAX_CAPACITY;
 

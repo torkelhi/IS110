@@ -22,6 +22,7 @@ public class SykkelLager {
         while (it.hasNext())
         {
             it.next().printSykkelStatus();
+            System.out.println("\n");
         }
     }
 
@@ -31,23 +32,33 @@ public class SykkelLager {
         Iterator<Sykkel> it = sykkel.iterator();
         int index=0;
 
-        while (it.hasNext() && pris < sykkel.get(index).getPris())
-        {
-            it.next().printSykkelStatus();
+        while (it.hasNext()) {
+            it.next();
+
+            if (pris < sykkel.get(index).getPris())
+            {
+                sykkel.get(index).printSykkelStatus();
+            System.out.println("\n");
+            }
+
             index ++;
         }
     }
 
-    public void printSykkelEtterType(String TYPE)
+    public void printSykkelEtterType(String type)
     {
         Iterator<Sykkel> it = sykkel.iterator();
-        String type = TYPE.toLowerCase();
         int index = 0;
 
-        while (it.hasNext() && type.equals(sykkel.get(index).getType()))
+        while (it.hasNext())
         {
-            it.next().printSykkelStatus();
-            index ++;
+            it.next();
+            if (type.equals(sykkel.get(index).getType()))
+            {
+                sykkel.get(index).printSykkelStatus();
+                System.out.println("\n");
+            }
+            index++;
         }
     }
 
