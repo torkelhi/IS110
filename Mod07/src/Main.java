@@ -17,10 +17,20 @@ public class Main {
         myArr.add(student04);
         myArr.add(student05);
 
-        for(int index = 0; index <myArr.size();){
-            myArr.get(index).getResult();
-            index += 2;
+        for (Resultat resultat : myArr) {
+            resultat.getResult();
         }
 
+     String [] myArray = {"a", "b", "c", "d", "e"};
+     int [] myArr2 = {1, 2, 3, 4, 5};
+
+
+
+    for(int i = 0; i <5;i +=2){
+         for(int j =0; j <5; j++){
+             System.out.print(myArr2[j]);
+         }
+         System.out.print(myArray[i]);
+     }
     }
 }
