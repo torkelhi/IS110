@@ -31,7 +31,7 @@ public class Gear {
      * 2 metoder for å sjekke om det er mulig å gire ned eller opp før en endring.
      * @return true hvis det er mulig og false om det ikke er det.
      */
-    public boolean canBikeChangeGearUp()
+    private boolean canBikeChangeGearUp()
     {
       if (gearNaa < MAX_CAPACITY || gearNaa == 1)
       {return true;}
@@ -44,7 +44,7 @@ public class Gear {
         return false;
     }
 
-    public boolean canBikeChangeGearDown()
+    private boolean canBikeChangeGearDown()
     {
         if (gearNaa == 1 || gearNaa == 0)
         {return false;}

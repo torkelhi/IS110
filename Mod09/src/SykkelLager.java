@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class SykkelLager {
 
@@ -17,11 +16,9 @@ public class SykkelLager {
     // Printer ut alle sykler
     public void printSykkelLager()
     {
-        Iterator<Sykkel> it = sykkel.iterator();
-
-        while (it.hasNext())
+        for (Sykkel value : sykkel)
         {
-            it.next().printSykkelStatus();
+            value.printSykkelStatus();
             System.out.println("\n");
         }
     }
@@ -35,19 +32,13 @@ public class SykkelLager {
      */
     public void printSykkelldyrereEnn(double pris)
     {
-        Iterator<Sykkel> it = sykkel.iterator();
-        int index=0;
-
-        while (it.hasNext()) {
-            it.next();
-
-            if (pris < sykkel.get(index).getPris())
+        for (Sykkel sykkel : sykkel)
+        {
+            if (pris < sykkel.getPris())
             {
-                sykkel.get(index).printSykkelStatus();
-            System.out.println("\n");
+                sykkel.printSykkelStatus();
+                System.out.println("\n");
             }
-
-            index ++;
         }
     }
 
@@ -59,18 +50,15 @@ public class SykkelLager {
      */
     public void printSykkelEtterType(String type)
     {
-        Iterator<Sykkel> it = sykkel.iterator();
-        int index = 0;
 
-        while (it.hasNext())
+
+        for (Sykkel sykkel : sykkel)
         {
-            it.next();
-            if (type.equals(sykkel.get(index).getType()))
+            if (type.equals(sykkel.getType()))
             {
-                sykkel.get(index).printSykkelStatus();
+                sykkel.printSykkelStatus();
                 System.out.println("\n");
             }
-            index++;
         }
     }
 
