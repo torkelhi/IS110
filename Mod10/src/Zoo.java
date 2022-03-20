@@ -83,7 +83,7 @@ public class Zoo {
     {
         for(Animal animal : myAnimals)
         {
-            if(animal.isMammal)
+            if(animal instanceof Mammal)
             {
                 animal.printAnimal();
             }
@@ -93,7 +93,7 @@ public class Zoo {
     {
         for(Animal animal : myAnimals)
         {
-            if(animal.isReptile)
+            if(animal instanceof Reptile)
             {
                 animal.printAnimal();
             }
@@ -103,7 +103,7 @@ public class Zoo {
     {
         for(Animal animal : myAnimals)
         {
-            if(animal.isAmphibian)
+            if(animal instanceof Amphibian)
             {
                 animal.printAnimal();
             }
@@ -114,13 +114,11 @@ public class Zoo {
     {
         for(Animal animal : myAnimals)
         {
-            if(animal.isFish)
+            if(animal instanceof Fish)
             {
                 animal.printAnimal();
             }
         }
     }
-
-
 
 }

@@ -5,6 +5,6 @@ public class Reptile extends Animal{
     {
         super(name, color, length, weight);
 
-        super.isReptile = true;
+        isReptile = true;
     }
 }

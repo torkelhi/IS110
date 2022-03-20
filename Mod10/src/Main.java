@@ -11,7 +11,9 @@ public class Main {
     {
         Zoo bergen = new Zoo(Address.BERGEN,"Akvariet");
 
-        bergen.whatCanIseeToday(ScheduleDay.FRIDAY);
+       // bergen.whatCanIseeToday(ScheduleDay.SATURDAY);
+
+
 
         // bergen.printAllAnimals();
         // bergen.printOnlyMammals();
