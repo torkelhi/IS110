@@ -6,11 +6,6 @@ public class Animal {
     private double length;
     private double weight;
     private int age;
-    protected boolean isMammal;
-    protected boolean isBird;
-    protected boolean isReptile;
-    protected boolean isAmphibian;
-    protected boolean isFish;
 
 
 public Animal(String name, String color, double length,double weight)

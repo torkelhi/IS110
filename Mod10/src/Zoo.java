@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class Zoo {
 
@@ -71,7 +72,7 @@ public class Zoo {
         }
     }
 
-    public void printAllAnimals()
+    private void printAllAnimals()
     {
         for(Animal animal : myAnimals)
         {
@@ -79,7 +80,14 @@ public class Zoo {
         }
     }
 
-  public void printOnlyMammals()
+    /**
+     * Methods using the instance of method.
+     * For every instance of the class specified it print.
+     *
+     * Is private, because it is for the method above - whatCanIseeToday.
+     * This can be achieveable with less methods. Only for practice.
+     */
+    private void printOnlyMammals()
     {
         for(Animal animal : myAnimals)
         {
@@ -89,7 +97,8 @@ public class Zoo {
             }
         }
     }
-    public void printOnlyReptile()
+
+    private void printOnlyReptile()
     {
         for(Animal animal : myAnimals)
         {
@@ -99,7 +108,8 @@ public class Zoo {
             }
         }
     }
-    public void printOnlyAmphibians()
+
+    private void printOnlyAmphibians()
     {
         for(Animal animal : myAnimals)
         {
@@ -110,7 +120,7 @@ public class Zoo {
         }
     }
 
-    public void printOnlyFish()
+    private void printOnlyFish()
     {
         for(Animal animal : myAnimals)
         {
@@ -121,4 +131,19 @@ public class Zoo {
         }
     }
 
+    /**
+     * Method to search for a specific animal.
+     * It goes through the arraylist and check's if the animalsearch string equals the class.
+     * @param animalSearch
+     */
+    public void searchForAnimal(String animalSearch)
+    {
+        for(Animal animal : myAnimals)
+        {
+            if(animal.getClass().toString().toLowerCase().contains(animalSearch.toLowerCase(Locale.ROOT)))
+            {
+                animal.printAnimal();
+            }
+        }
+    }
 }
