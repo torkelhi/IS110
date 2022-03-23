@@ -1,19 +1,13 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
 
 public class Zoo {
 
-    private final Address address;
-    private final String name;
     private ArrayList<Animal> myAnimals = new ArrayList<>();
     private HashMap<Address,String> ZooMap = new HashMap<>();
 
     public Zoo(Address address, String name){
-        this.address = address;
-        this.name = name;
         setUpAnimals();
-
         ZooMap.put(address, name);
     }
 
@@ -140,7 +134,7 @@ public class Zoo {
     {
         for(Animal animal : myAnimals)
         {
-            if(animal.getClass().toString().toLowerCase().contains(animalSearch.toLowerCase(Locale.ROOT)))
+            if(animal.getClass().toString().toLowerCase().contains(animalSearch.toLowerCase()))
             {
                 animal.printAnimal();
             }
