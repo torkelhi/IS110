@@ -11,15 +11,11 @@ public class Main {
     {
         Zoo bergen = new Zoo(Address.BERGEN,"Akvariet");
 
-        bergen.whatCanIseeToday(ScheduleDay.SATURDAY);
+        bergen.whatCanIseeToday(ScheduleDay.SUNDAY);
 
         //bergen.searchForAnimal("fish");
         //bergen.searchForAnimal("cat");
         //bergen.searchForAnimal("eagle");
-
-
-
-
 
     }
 }

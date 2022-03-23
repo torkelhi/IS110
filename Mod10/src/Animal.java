@@ -38,8 +38,17 @@ public Animal(String name, String color, double length,double weight)
         System.out.println("My name is "+getName()+".");
         System.out.println("I am the color "+getColor()+".");
         System.out.println("I weigh "+getWeight()+" kg.");
+        printFishDetails();
+        printReptileDetails();
+        printCatDetails();
         System.out.println("-----------" + "\n");
     }
+
+    //Methods overriden in subclasses.
+    public void printFishDetails(){}
+    public void printReptileDetails(){}
+    public void printCatDetails(){}
+
 
     public String getName() {return name;}
     public String getColor() {return color;}
