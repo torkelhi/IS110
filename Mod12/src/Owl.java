@@ -1,5 +1,5 @@
 
-public class Owl extends Bird{
+public class Owl extends Bird implements AnimalSound{
     /**
      * This class extends Bird.
      * It's inheritance comes from class Animal and Bird
@@ -11,6 +11,22 @@ public class Owl extends Bird{
     public Owl(String name, String color, int age, double weight)
     {
         super(name, color, age, weight);
+    }
+    public void speak() {
+        System.out.println("KOOOO KOOOOO KOOO");
+    }
+
+    public void act() {
+        System.out.println("*turns head around 360 degrees*");
+    }
+
+    public void printAnimal()
+    {
+        super.printAnimal();
+        System.out.println(getClass());
+        speak();
+        act();
+        System.out.println("");
     }
 
 }

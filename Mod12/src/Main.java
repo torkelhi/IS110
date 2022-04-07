@@ -16,6 +16,7 @@ public class Main {
         //bergen.searchForAnimal("fish");
         //bergen.searchForAnimal("cat");
         //bergen.searchForAnimal("eagle");
+        bergen.printOnlyAnimalThatCanSpeak();
 
     }
 }

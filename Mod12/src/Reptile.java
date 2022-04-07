@@ -30,6 +30,7 @@ public class Reptile extends Animal{
 
     public void printAnimal()
     {
+        System.out.println("");
         System.out.println("Halo, my name is "+name);
         System.out.println("I am the color "+color);
         System.out.println("Weight: "+weight);
